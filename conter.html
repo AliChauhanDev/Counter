@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+        body {
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #212121;
+
+        }
+        .main{
+            display: flex;
+        }
+        div{
+            margin: 10px;
+        }
+        .main{
+            background-color: rgba(0, 0, 0, 0.241);
+            width:300px;
+            justify-content: space-around;
+            border-radius: 20px;
+        }
+        #display {
+    width: 50px;
+    background-color: rgba(62, 55, 55, 0.526);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.496); 
+    backdrop-filter: blur(5px); 
+    background-clip: padding-box; 
+    color: white;
+    padding: 10px; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+        }
+button {
+    background-color:  #cbb028; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.496);
+    transition: box-shadow 0.7s ease;
+    transition: background-color 0.7s ease;
+}
+
+button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.496);
+    background-color: #090a096f !important; 
+}
+
+button:focus {
+    outline: none; 
+}
+h1 {
+        position: absolute;
+        top:320px; 
+        left: 24em; 
+        transform: translateX(-50%);
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Counter</h1>
+    </div>
+    <div class="main">
+    <div><button id="ppp" onclick="pp()">+</button></div>
+    <div id="display">0</div>
+    <div><button id="mmm" onclick="mm()">-</button></div>
+</div>
+<script>
+    let p = document.getElementById('ppp');
+    let m = document.getElementById('mmm');
+    let counter = document.getElementById('display');
+    let count = 0;
+    p.addEventListener('click',function pp(){
+        count++;
+        counter.textContent = count;
+        if (count > 0) {
+            m.style.backgroundColor = "#cbb028";
+        }
+    });
+    m.addEventListener('click',function mm(){
+        if (count > 0){
+        count--;
+        counter.textContent = count;
+        }
+        else{
+            m.style.backgroundColor ="red";
+        }
+    });
+
+</script>
+</body>
+</html>
