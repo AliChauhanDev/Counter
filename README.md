@@ -1,2 +1,2 @@
-# Caunter
-Cauntter website that caun evrything
+# Counter
+Countter website that caun evrything
